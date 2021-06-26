@@ -1,13 +1,17 @@
-const ids = new Set();
-ids.add("abc");
-ids.add(1);
-ids.add("bb2");
-ids.add(1);
+const person = {
+  firstName: "Max",
+  age: 31,
+  hobbies: ["Sport", "Cooking"],
+  age: 32,
+  greet() {
+    console.log("Hi,I am " + this.firstName);
+  },
+};
 
-for (const el of ids) {
-  console.log(el);
-}
+console.log(person.age);
+person.lastname = "林";
+console.log(person);
 
-console.log(ids.has("abc"));
-ids.delete("bb2");
-console.log(ids);
+delete person.age;
+console.log(person);
+person.greet();
